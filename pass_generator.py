@@ -12,6 +12,12 @@ characters = letters + numbers + symbols
 
 
 
-password = ''.join(random.choice(characters) for i in range(8))
+password = ''.join(random.choice(characters) for i in range(20))
 
-print(password)
+password_letters = list(password) # this allows to make shuffle for every sign in the password
+
+random.shuffle(password_letters) # making all shuffle
+
+value = ''.join(password_letters) # connecting after shuffle back to the string
+
+print(value) # new password, that has been also shuffled for safety
